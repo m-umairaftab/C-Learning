@@ -1,11 +1,11 @@
 #include<stdio.h>
 void main(){
-    char s[5];
+    const int a=10;
+    char s[a];
     printf("Enter any string : ");
-    fgets(s,5,stdin);
-    printf("%c",s[5]);
-    printf("%c",s[4]);
-    printf("%c",s[3]);
-    printf("%c",s[2]);
-    printf("%c\n",s[1]);
+    fgets(s,a,stdin);
+    for(int i=sizeof(s); i<=sizeof(s);i--){
+        printf("%c",s[i]);
+    }    
+    printf("\n");
 }
